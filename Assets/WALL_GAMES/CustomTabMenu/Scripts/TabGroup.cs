@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -54,11 +55,11 @@ public class TabGroup : MonoBehaviour
         }
 
         selectedTab = tabButton;
-
         selectedTab.Select();
 
         ResetTabs();
         tabButton.background.color = tabSelectedColor;
+        tabButton.text.color = Color.white;
         int index = tabButton.transform.GetSiblingIndex();
         for (int i = 0; i < tabPages.Count; i++)
         {
@@ -80,6 +81,7 @@ public class TabGroup : MonoBehaviour
             if ((selectedTab != null) && (tabButton == selectedTab))
                 continue;
             tabButton.background.color = tabIdleColor;
+            tabButton.text.color = Color.black;
         }
     }
 

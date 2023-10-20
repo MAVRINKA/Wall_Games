@@ -44,7 +44,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Mechanics/Lider_2023/Pirates.unity
     guid: 8d26704da57f3d348970ff0013bc4c25
-  - enabled: 1
+  - enabled: 0
     path: Assets/Mechanics/Fantasy_Game/Krokodile/Krocodile_WiFi.unity
     guid: e903d2de15dbd6b4684ad2137d05462b
+  - enabled: 1
+    path: Assets/WALL_GAMES/CustomTabMenu/Scenes/MenuWallGames.unity
+    guid: 60a6717846dbeea468cb53b1f224357c
   m_configObjects: {}

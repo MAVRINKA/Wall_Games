@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using TMPro;
 
 [RequireComponent(typeof(Image))]
 public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler
@@ -15,8 +16,12 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
     [HideInInspector]
     public Image background;
 
+    [HideInInspector]
+    public TextMeshProUGUI text;
+
     void Start()
     {
+        text = GetComponentInChildren<TextMeshProUGUI>();
         background = GetComponent<Image>();
         if (tabGroup != null)
             tabGroup.Subscribe(this);
