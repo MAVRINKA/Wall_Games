@@ -12,7 +12,7 @@ public class TakeDamage : MonoBehaviour
         health -= damageValue;
         if(health <= 0)
         {
-            //Die();
+            Die();
 
             if(takeDamage != null)
             takeDamage.Invoke();

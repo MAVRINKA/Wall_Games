@@ -5,49 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/PuzzleRotate/TouchWall.unity
-    guid: 71734703d43ed0f4f9cd9eb1fefcfc07
-  - enabled: 0
-    path: Assets/ScratchCard/Coloring_Wall.unity
-    guid: eec2c154c347f2a4ea463eaa1e1d4241
-  - enabled: 0
-    path: Assets/Mechanics/Scenes/SandBoxGame.unity
-    guid: 5d7a7b2c75f8aa04b9d577910926be68
-  - enabled: 0
-    path: Assets/Mechanics/Scenes/Kidalki/SOS_Game/Wall_Throw_Kids_2D 1.unity
-    guid: 924a0bcd7f9306c49aeb39e41335b3f0
-  - enabled: 0
-    path: Assets/Mechanics/Cosmos/Scratch_Cosmo/Coloring_Wall_Cosmos.unity
-    guid: db6f4c8d5e12860409bbfeb1f780141c
-  - enabled: 0
-    path: Assets/Mechanics/Scenes/Kidalki/Cosmos/Wall_Throw_Kids_Cosmos.unity
-    guid: 691ef465259fdb74abdfa0cda3dcb3ff
-  - enabled: 0
-    path: Assets/Mechanics/Fantasy_Game/Krokodile/Krocodile.unity
-    guid: 4d60de3e4385d944bb88c06af3b3d7a5
-  - enabled: 0
-    path: Assets/Mechanics/Fantasy_Game/Doctor/Doctor.unity
-    guid: 862171f7a6149c3489fbc1fa50ea5c64
-  - enabled: 0
-    path: Assets/Mechanics/Scenes/Finger_Box/Finger_Box.unity
-    guid: f3045414bfc45894b91b9baeabf5e564
-  - enabled: 0
-    path: Assets/Mechanics/Slet23/Menu.unity
-    guid: 4ce05955f87a11c429d588103ef22f50
-  - enabled: 0
-    path: Assets/Mechanics/Slet23/Scratch_Slet/Zadanie1.unity
-    guid: e395d5042fe3b4d4199a9b75b09b563a
-  - enabled: 0
-    path: Assets/Mechanics/Slet23/Search/Zadanie2.unity
-    guid: 7979590c973a6a54599da7f1b35ecc6e
-  - enabled: 0
-    path: Assets/Mechanics/Lider_2023/Pirates.unity
-    guid: 8d26704da57f3d348970ff0013bc4c25
-  - enabled: 0
-    path: Assets/Mechanics/Fantasy_Game/Krokodile/Krocodile_WiFi.unity
-    guid: e903d2de15dbd6b4684ad2137d05462b
   - enabled: 1
-    path: Assets/WALL_GAMES/CustomTabMenu/Scenes/MenuWallGames.unity
-    guid: 60a6717846dbeea468cb53b1f224357c
+    path: Assets/WALL_GAMES/Mechanics/Internet.unity
+    guid: 5ac7a39f4a0e4ae4ba43abe4810a056e
   m_configObjects: {}

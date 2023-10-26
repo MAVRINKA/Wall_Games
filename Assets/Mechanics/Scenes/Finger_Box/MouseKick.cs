@@ -17,11 +17,11 @@ public class MouseKick : MonoBehaviour
     {
         if (bl != false)
         {
-            img.fillAmount += 0.001f;
+            img.fillAmount += 0.01f;
         }
         else if(img.fillAmount > 0)
         {
-            img.fillAmount -= 0.0001f;
+            img.fillAmount -= 0.001f;
         }
     }
 

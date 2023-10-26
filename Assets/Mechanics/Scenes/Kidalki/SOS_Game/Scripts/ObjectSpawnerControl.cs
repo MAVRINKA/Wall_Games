@@ -10,10 +10,11 @@ public class ObjectSpawnerControl : MonoBehaviour
     private int randomSpawnPoint, randomMonster;
     public static bool spawnAllowed;
 
+    public float speedSpawn = 2f;
     private void Start()
     {
         spawnAllowed = true;
-        InvokeRepeating("SpawnAMonster", 0f, 2f);
+        InvokeRepeating("SpawnAMonster", 0f, speedSpawn);
     }
 
     public void SpawnAMonster()
