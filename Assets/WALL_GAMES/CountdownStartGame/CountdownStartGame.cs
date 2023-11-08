@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class CountdownStartGame : MonoBehaviour
 {
+    [Range(0, 5)]
     [SerializeField] private int countdownTime;
     [SerializeField] private TextMeshProUGUI countdownDisplay;
 

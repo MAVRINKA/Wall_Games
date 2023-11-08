@@ -54,6 +54,7 @@ public class ObjectMoveControl : MonoBehaviour
         else if (timerControl.timeValue <= 0)
         {
             ObjectSpawnerControl.spawnAllowed = false;
+            target = null;
         }
     }
 

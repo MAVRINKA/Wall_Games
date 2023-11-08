@@ -1,17 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class TouchSpawn : MonoBehaviour
+public class InputStyles : MonoBehaviour
 {
-    public GameObject particlesSpawn;
+    public GameObject particlesSpawnEffect;
+    public bool colorEffect;
 
     public enum InputStyle { MOUSE, TOUCHES }
     public InputStyle inputStyle;
-    //public ParticleSystem particle;
-    //public List<GameObject> particles = new List<GameObject>();
 
-    void WhackMole()
+    void InputController()
     {
         switch (inputStyle)
         {
@@ -22,11 +19,9 @@ public class TouchSpawn : MonoBehaviour
 
                     if (Physics.Raycast(ray, out RaycastHit hit))
                     {
-                        // If I hit a mole
                         if (hit.collider.gameObject)
                         {
-                            Instantiate(particlesSpawn, hit.point, Quaternion.identity);
-                            hit.collider.gameObject.GetComponent<TakeDamage>().TakeDamages(1f);
+                            DamageHit(hit);
                         }
                     }
                 }
@@ -39,11 +34,9 @@ public class TouchSpawn : MonoBehaviour
 
                     if (Physics.Raycast(ray, out RaycastHit hit))
                     {
-                        // If I hit a mole
                         if (hit.collider.gameObject)
                         {
-                            Instantiate(particlesSpawn, hit.point, Quaternion.identity);
-                            hit.collider.gameObject.GetComponent<TakeDamage>().TakeDamages(1f);
+                            DamageHit(hit);
                         }
                     }
                 }
@@ -51,15 +44,29 @@ public class TouchSpawn : MonoBehaviour
         }     
     }
 
-    void Update()
+    private void DamageHit(RaycastHit hit)
     {
-        WhackMole();
+        var newParticle = Instantiate(particlesSpawnEffect, hit.point, Quaternion.identity);
+        hit.collider.gameObject.GetComponent<TakeDamage>().TakeDamages(1f);
+
+        if (colorEffect)
+        {
+            newParticle.GetComponent<SpriteRenderer>().color = hit.collider.gameObject.GetComponent<ColorHit>().colorImg;
+        } else
+        {
+            newParticle.GetComponent<SpriteRenderer>().color = Color.green;
+        }
     }
 
-    GameObject SpawnObjects()
+    void Update()
     {
-        Vector3 mousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-        return Instantiate(particlesSpawn, worldPos, particlesSpawn.transform.rotation);
+        InputController();
     }
+
+    //GameObject SpawnObjects()
+    //{
+    //    Vector3 mousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
+    //    Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+    //    return Instantiate(particlesSpawn, worldPos, particlesSpawn.transform.rotation);
+    //}
 }

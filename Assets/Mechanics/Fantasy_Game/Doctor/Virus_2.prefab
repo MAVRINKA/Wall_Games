@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4577343620265485435}
   - component: {fileID: 178199943196855679}
   - component: {fileID: 1059363593092750571}
+  - component: {fileID: -1706410899452163043}
   m_Layer: 0
   m_Name: Virus_2
   m_TagString: Enemy
@@ -170,3 +171,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-1706410899452163043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375098513656087782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5384abfb7c3446e428f90caa3ada3b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorImg: {r: 0.7725491, g: 0.14117648, b: 0.16078432, a: 1}

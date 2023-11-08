@@ -124,7 +124,7 @@ public class QuizGame : MonoBehaviour
 
     IEnumerator CompleteGame()
     {
-        if(score <= numberQuestion / 2)
+        if (score <= numberQuestion / 2)
             quiz_UI.infoTxt.text = "Стоит немного потренироваться!";
         else
             quiz_UI.infoTxt.text = quiz_UI.infoTxt.text;
@@ -210,4 +210,4 @@ public class QuestionList
 public enum QuestionType { TEXT, IMAGE, AUDIO, VIDEO }
 
 [System.Serializable]
-public enum GameStyle { PLAYING, TRANSITION, NEXTQUESTION  } // let's play or move on to the question
+public enum GameStyle { PLAYING, TRANSITION, NEXTQUESTION, ENDGAME  } // let's play or move on to the question

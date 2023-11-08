@@ -21,7 +21,6 @@ public class TimerControl : MonoBehaviour
          else if(timeValue <= 0)
         {
             winPanel.SetActive(true);
-            ObjectSpawnerControl.spawnAllowed = false;
         }
 
          else
