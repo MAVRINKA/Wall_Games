@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/WALL_GAMES/Mechanics/Internet.unity
-    guid: 5ac7a39f4a0e4ae4ba43abe4810a056e
+    path: Assets/WALL_GAMES/CustomTabMenu/Scenes/MenuWallGames.unity
+    guid: 60a6717846dbeea468cb53b1f224357c
+  - enabled: 1
+    path: Assets/Mechanics/Fantasy_Game/Krokodile/Krocodile.unity
+    guid: 4d60de3e4385d944bb88c06af3b3d7a5
   m_configObjects: {}

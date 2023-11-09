@@ -3,6 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
+    private static SceneChange instance;
+
+    private void Awake()
+    {
+        if (instance != null)
+            Destroy(gameObject);
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     public void NextScene(string name)
     {
         SceneManager.LoadScene(name);
