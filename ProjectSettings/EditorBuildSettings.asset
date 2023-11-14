@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/WALL_GAMES/CustomTabMenu/Scenes/MenuWallGames.unity
-    guid: 60a6717846dbeea468cb53b1f224357c
-  - enabled: 1
-    path: Assets/Mechanics/Fantasy_Game/Krokodile/Krocodile.unity
-    guid: 4d60de3e4385d944bb88c06af3b3d7a5
+    path: Assets/WALL_GAMES/Mechanics/SleepStyle/SleepStyle 1.unity
+    guid: b6e8a0ad3072faa41bf521e7237c3695
   m_configObjects: {}
