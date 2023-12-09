@@ -49,13 +49,13 @@ public class InputStyles : MonoBehaviour
         var newParticle = Instantiate(particlesSpawnEffect, hit.point, Quaternion.identity);
         hit.collider.gameObject.GetComponent<TakeDamage>().TakeDamages(1f);
 
-        if (colorEffect)
-        {
-            newParticle.GetComponent<SpriteRenderer>().color = hit.collider.gameObject.GetComponent<ColorHit>().colorImg;
-        } else
-        {
-            newParticle.GetComponent<SpriteRenderer>().color = Color.green;
-        }
+        //if (colorEffect)
+        //{
+        //    newParticle.GetComponent<SpriteRenderer>().color = hit.collider.gameObject.GetComponent<ColorHit>().colorImg;
+        //} else
+        //{
+        //    newParticle.GetComponent<SpriteRenderer>().color = Color.green;
+        //}
     }
 
     void Update()

@@ -7,6 +7,7 @@ TagManager:
   - FxTemporaire
   - Shield
   - Enemy
+  - Target
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - 
   - 
   - Scratching
-  - 
+  - Circles
   - 
   - 
   - 
@@ -43,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Circles
+    uniqueID: 2387836735
     locked: 0
