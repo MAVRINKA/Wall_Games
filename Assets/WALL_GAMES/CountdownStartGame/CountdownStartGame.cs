@@ -13,10 +13,10 @@ public class CountdownStartGame : MonoBehaviour
     [SerializeField] UnityEvent actionToStart;
     private void Start()
     {
-        StartCoroutine(CountDownToStart());
+        //StartCoroutine(CountDownToStart());
     }
 
-    IEnumerator CountDownToStart()
+    public IEnumerator CountDownToStart()
     {
         while(countdownTime > 0)
         {
@@ -35,5 +35,10 @@ public class CountdownStartGame : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         countdownDisplay.gameObject.SetActive(false);
+    }
+
+    public void StartCount()
+    {
+        StartCoroutine(CountDownToStart());
     }
 }
