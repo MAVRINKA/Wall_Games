@@ -67,10 +67,9 @@ public class UIManagerHidden : MonoBehaviour
             }
         }
     }
-
-    public void NextButton()                                                    //Method called when NextButton is clicked
+    public void NextButton(string nameScene)                                                    //Method called when NextButton is clicked
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);       //load the scene
+        SceneManager.LoadScene(nameScene);       //load the scene
     }
 
     public void HintButton()

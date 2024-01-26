@@ -17,7 +17,10 @@ public class LevelManager : MonoBehaviour
     private int totalHiddenObjectsFound = 0;                            //int to keep track of hidden objects found
     private TimeSpan time;                                              //variable to help convert currentTime into time format
     private RaycastHit2D hit;
-    private Vector3 pos;                                                //hold Mouse Tap position converted to WorldPoint
+    private Vector3 pos;
+    //hold Mouse Tap position converted to WorldPoint
+
+    public AudioSource audioSource;
 
     private void Awake()
     {
@@ -89,6 +92,7 @@ public class LevelManager : MonoBehaviour
                     hit.collider.gameObject.SetActive(false);               //deactivate the hit object
                     //Remember we renamed all our object to their respective Index, we did it for UIManager
                     UIManagerHidden.instance.CheckSelectedHiddenObject(hit.collider.gameObject.name); //send the name of hit object to UIManager
+                    audioSource.Play();
 
                     for (int i = 0; i < activeHiddenObjectList.Count; i++)
                     {
