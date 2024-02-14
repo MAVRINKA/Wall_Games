@@ -12,6 +12,8 @@ public class LineSelect : MonoBehaviour
     public AudioClip win;
     public AudioClip lose;
 
+    public GameObject infoPanel;
+
     private void Update()
     {
         //CheckComplete();
@@ -19,6 +21,12 @@ public class LineSelect : MonoBehaviour
         {
             CheckComplete();
         }
+    }
+
+    IEnumerator WinPanel()
+    {
+        yield return new WaitForSeconds(2f);
+        infoPanel.SetActive(true);
     }
     public void CheckComplete()
     {
@@ -28,6 +36,7 @@ public class LineSelect : MonoBehaviour
         {
             imgCheck.color = Color.green;
             audioPlaying.PlayOneShot(win);
+            StartCoroutine(WinPanel());
             Debug.Log("Верно");
         }
 

@@ -14,6 +14,17 @@ public class SencSelect : MonoBehaviour
     public AudioClip win;
     public AudioClip lose;
 
+    public Color defaultColor;
+
+    private void Update()
+    {
+        //CheckComplete();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            CheckSend();
+        }
+    }
+
     public void CheckSend()
     {
         StartCoroutine(Check());
@@ -25,13 +36,12 @@ public class SencSelect : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
+
         for (int i = 0; i < checkSend.Length; i++)
         {
             checkSend[i].SetActive(true);
 
-            if (completeObj[0].activeSelf && completeObj[1].activeSelf &&
-                completeObj[2].activeSelf && completeObj[3].activeSelf &&
-                completeObj[4].activeSelf)
+            if (completeObj[0].activeSelf)
             {
                 Debug.Log("онаедю!");
                 winPanel.GetComponent<Image>().color = Color.green;
@@ -49,5 +59,8 @@ public class SencSelect : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
         winPanel.SetActive(false);
-    }
+        winPanel.GetComponent<Image>().color = defaultColor;
+
 }
+}
+

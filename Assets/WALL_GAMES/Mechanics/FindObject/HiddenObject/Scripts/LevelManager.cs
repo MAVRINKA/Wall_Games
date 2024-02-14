@@ -115,16 +115,16 @@ public class LevelManager : MonoBehaviour
                 }
             }
 
-            currentTime -= Time.deltaTime;  //as long as gamestatus i in playing, we keep reducing currentTime by Time.deltaTime
+            //currentTime -= Time.deltaTime;  //as long as gamestatus i in playing, we keep reducing currentTime by Time.deltaTime
 
-            time = TimeSpan.FromSeconds(currentTime);                       //set the time value
-            UIManagerHidden.instance.TimerText.text = time.ToString("mm':'ss");   //convert time to Time format
-            if (currentTime <= 0)                                           //if currentTime is less or equal to zero
-            {
-                Debug.Log("Time Up");                                       //if yes then we have lost the game
-                UIManagerHidden.instance.GameCompleteObj.SetActive(true);         //activate GameComplete panel
-                gameStatus = GameStatus.NEXT;                               //set gamestatus to Next
-            }
+            //time = TimeSpan.FromSeconds(currentTime);                       //set the time value
+            //UIManagerHidden.instance.TimerText.text = time.ToString("mm':'ss");   //convert time to Time format
+            //if (currentTime <= 0)                                           //if currentTime is less or equal to zero
+            //{
+            //    Debug.Log("Time Up");                                       //if yes then we have lost the game
+            //    UIManagerHidden.instance.GameCompleteObj.SetActive(true);         //activate GameComplete panel
+            //    gameStatus = GameStatus.NEXT;                               //set gamestatus to Next
+            //}
         }
     }
 
