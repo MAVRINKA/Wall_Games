@@ -16,6 +16,14 @@ public class CountdownStartGame : MonoBehaviour
         //StartCoroutine(CountDownToStart());
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            StartCoroutine(CountDownToStart());
+        }
+    }
+
     public IEnumerator CountDownToStart()
     {
         while(countdownTime > 0)

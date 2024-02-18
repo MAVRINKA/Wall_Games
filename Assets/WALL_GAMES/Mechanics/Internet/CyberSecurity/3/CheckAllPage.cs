@@ -8,12 +8,16 @@ public class CheckAllPage : MonoBehaviour
 {
     public GameObject[] checkSend;
     public GameObject[] completeObj;
+    public GameObject[] falseObj;
+
+    public GameObject noObj;
 
     public GameObject winPanel;
 
     public AudioSource audioPlaying;
     public AudioClip win;
     public AudioClip lose;
+
 
     public Color defaultColor;
 
@@ -38,12 +42,13 @@ public class CheckAllPage : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         bool allActive = completeObj.All(image => image.activeSelf);
+        bool allFalse = falseObj.All(image => !image.activeSelf);
 
         for (int i = 0; i < checkSend.Length; i++)
         {
             checkSend[i].SetActive(true);
 
-            if (allActive)
+            if (allActive && allFalse)
             {
                 Debug.Log("онаедю!");
                 winPanel.GetComponent<Image>().color = Color.green;
