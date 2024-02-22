@@ -64,6 +64,16 @@ public class InputStyles : MonoBehaviour
     void Update()
     {
         InputController();
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            interactionMode = InteractionMode.MOUSE;
+        }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            interactionMode = InteractionMode.TOUCH;
+        }
     }
 
     #region UnityEditor
